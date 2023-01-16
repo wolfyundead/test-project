@@ -10,8 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" } // for this library
+        maven { url 'https://artifactory.mxtracks.info/artifactory/gradle-dev-local/' }
     }
 }
-rootProject.name = "Camera_card_detection"
+rootProject.name = "Live_OPEN_CV"
 include ':app'
-include ':smartcropperlib'
+include ':library'
