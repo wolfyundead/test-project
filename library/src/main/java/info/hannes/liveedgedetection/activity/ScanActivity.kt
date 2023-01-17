@@ -40,7 +40,11 @@ import kotlin.math.abs
 /**
  * This class initiates camera and detects edges on live view
  */
+<<<<<<< HEAD
 class ScanActivity : AppCompatActivity(), IScanner {
+=======
+class ScanActivity : AppCompatActivity(), IScanner, View.OnClickListener {
+>>>>>>> 409985b07d17efc139053df4cbb6f1d30e43e9b4
     private var fullSizePoints: MutableMap<Int, PointF>? = null
     private var imageSurfaceView: ScanSurfaceView? = null
     private var isCameraPermissionGranted = true
@@ -60,7 +64,11 @@ class ScanActivity : AppCompatActivity(), IScanner {
         timeHoldStill = intent.getLongExtra(ScanConstants.TIME_HOLD_STILL, ScanSurfaceView.DEFAULT_TIME_POST_PICTURE)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
+<<<<<<< HEAD
       //  binding.buttonCropOk.setOnClickListener(this)
+=======
+        binding.buttonCropOk.setOnClickListener(this)
+>>>>>>> 409985b07d17efc139053df4cbb6f1d30e43e9b4
         binding.buttonCropReject.setOnClickListener {
             TransitionManager.beginDelayedTransition(binding.containerScan)
             binding.cropLayout.visibility = View.GONE
@@ -181,7 +189,11 @@ class ScanActivity : AppCompatActivity(), IScanner {
                         points.add(PointF(quad.points[1].x.toFloat(), quad.points[1].y.toFloat()))
                         points.add(PointF(quad.points[3].x.toFloat(), quad.points[3].y.toFloat()))
                         points.add(PointF(quad.points[2].x.toFloat(), quad.points[2].y.toFloat()))
+<<<<<<< HEAD
                     } else  {
+=======
+                    } else {
+>>>>>>> 409985b07d17efc139053df4cbb6f1d30e43e9b4
                         points = it.getPolygonDefaultPoints()
                     }
                 } else {
@@ -197,7 +209,11 @@ class ScanActivity : AppCompatActivity(), IScanner {
                 layoutParams.gravity = Gravity.CENTER
                 binding.polygonView.layoutParams = layoutParams
                 TransitionManager.beginDelayedTransition(binding.containerScan)
+<<<<<<< HEAD
              //   binding.cropLayout.visibility = View.VISIBLE
+=======
+                binding.cropLayout.visibility = View.VISIBLE
+>>>>>>> 409985b07d17efc139053df4cbb6f1d30e43e9b4
                 binding.cropImageView.setImageBitmap(it)
                 binding.cropImageView.scaleType = ImageView.ScaleType.FIT_XY
             }
@@ -227,18 +243,26 @@ class ScanActivity : AppCompatActivity(), IScanner {
                     pointFs[++index] = pointF
                 }
                 fullSizePoints = pointFs
+<<<<<<< HEAD
 
 
                 TakePic_Without_Showing()
 
 
+=======
+>>>>>>> 409985b07d17efc139053df4cbb6f1d30e43e9b4
             }
         } catch (e: Exception) {
             Timber.e(e)
         }
     }
 
+<<<<<<< HEAD
     fun TakePic_Without_Showing() {
+=======
+    @SuppressLint("SimpleDateFormat")
+    override fun onClick(view: View) {
+>>>>>>> 409985b07d17efc139053df4cbb6f1d30e43e9b4
         val points = fullSizePoints!!.toMap()
         val croppedBitmap = if (ScanUtils.isScanPointsValid(points)) {
             val point1 = Point(points.getValue(0).x.toDouble(), points.getValue(0).y.toDouble())

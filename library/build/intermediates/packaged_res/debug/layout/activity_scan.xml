@@ -84,9 +84,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
+<<<<<<< HEAD
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
             android:paddingBottom="4dp"
+=======
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+>>>>>>> 409985b07d17efc139053df4cbb6f1d30e43e9b4
             android:text="@string/finding_rect"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_18" />
